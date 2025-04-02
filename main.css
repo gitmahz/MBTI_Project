@@ -80,3 +80,44 @@ body {
     border-bottom-right-radius: 30px;
 }
 
+svg {
+    display: block;
+    margin: auto;
+}
+.container{
+    justify-content: center;
+    text-align: center;
+
+}
+
+.pi-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+svg {
+    display: block;
+}
+#legend{
+    padding: 5vh;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+#largest-value-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
