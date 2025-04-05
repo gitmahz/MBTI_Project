@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         {
             speaker: 'bot',
-            text: ["9) Would you identify yourself as a logical person or one who values emotions and personal values?"],
+            text: ["9) Would you identify yourself as a logical person or one who values emotions and personal values? "],
             choices: [
                 { id: 1, text: "Emotions are what make us human! ", type: 'A', weight: 1, next: 9 }, //F
                 { id: 2, text: "Staying logical is the safest bet.", type: 'B', weight: 1, next: 9 }, //T
