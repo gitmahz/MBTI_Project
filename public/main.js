@@ -37,6 +37,145 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         },
         // Add more questions here...
+
+        //Extravert/Introvert
+        {
+            speaker: 'bot',
+            text: ["3) Do you regain your energy from being alone in your own safe space or going out and hanging with other people?"], 
+            choices: [
+                { id: 1, text: "I hang out with people every chance I get. What’s the fun in staying home on a weekend?", type: 'A', weight: 1, next: 3 }, //E
+                { id: 2, text: "I prefer to recharge in the comfort of my room or favourite corner, maybe listening to some tunes.", type: 'B', weight: 1, next: 3 }, //I
+                { id: 3, text: "I do like being with people, but after a long day of socializing, I need time to myself ", type: 'C', weight: 1, next: 3 }, //I
+                { id: 4, text: "Being with people, to me, is comforting ", type: 'D', weight: 1, next: 3 } //E
+            ]
+        },
+        {
+            speaker: 'bot',
+            text: ["4) Do you thrive in social settings, or are you just wondering when it’s time to go home?"], 
+            choices: [
+                { id: 1, text: "When can I go homee?", type: 'A', weight: 1, next: 4 }, //I
+                { id: 2, text: "Oh yeah, I do consider myself the life of the party! ", type: 'B', weight: 1, next: 4 }, //E
+                { id: 3, text: "If it’s a small gathering over a big party then I’m fine ", type: 'C', weight: 1, next: 4 }, //I
+                { id: 4, text: "A party? To meet new people? Sign me up! ", type: 'D', weight: 1, next: 4 } //E
+            ]
+        },
+
+        {
+            speaker: 'bot',
+            text: ["5) How long does it take for your social battery to drain?"],
+            choices: [
+                { id: 1, text: "Oh boy.  A minute is my maximum.", type: 'A', weight: 1, next: 5 }, //I
+                { id: 2, text: "Never <3 ", type: 'B', weight: 1, next: 5 }, //E
+                { id: 3, text: "Social battery, what’s that? ", type: 'C', weight: 1, next: 5 }, //E
+                { id: 4, text: "A couple of hours or so, give or take? ", type: 'D', weight: 1, next: 5 } //I
+            ]
+        },
+
+        //Senors/Intuitive 
+
+        {
+            speaker: 'bot',
+            text: ["6) When working on a new project, do you rely on proven facts to determine your course of action enjoy coming up with your own ideas?"],
+            choices: [
+                { id: 1, text: "It’s all in the facts.", type: 'A', weight: 1, next: 6 }, //S
+                { id: 2, text: "Let your own ideas shine!", type: 'B', weight: 1, next: 6 }, //N
+                { id: 3, text: "I think being able to rely on something proven is nice.", type: 'C', weight: 1, next: 6 }, //S
+                { id: 4, text: "It’s more fun to create something new and exciting.", type: 'D', weight: 1, next: 6 } //N
+            ]
+        },
+
+        {
+            speaker: 'bot',
+            text: ["7) Do you tend to skip over the details, or do you often find yourself overthinking each one? "],
+            choices: [
+                { id: 1, text: "Wait, was the question again? ", type: 'A', weight: 1, next: 7 }, //N
+                { id: 2, text: "Let me think about it. ", type: 'B', weight: 1, next: 7 }, //S
+                { id: 3, text: "What’s the fun in being bogged down by details? ", type: 'C', weight: 1, next: 7 }, //N
+                { id: 4, text: "Details are key. ", type: 'D', weight: 1, next: 7 } //S
+            ]
+        },
+
+        {
+            speaker: 'bot',
+            text: ["8) Do you focus more on the present and your current situation, or the bigger picture, seeking the potential in things?"],
+            choices: [
+                { id: 1, text: "Think big, make it big.", type: 'A', weight: 1, next: 8 }, //N
+                { id: 2, text: "Deal with the situation at hand first.", type: 'B', weight: 1, next: 8 }, //S
+                { id: 3, text: "I do love the thrill of spotting potential", type: 'C', weight: 1, next: 8 }, //N
+                { id: 4, text: "The present is what matters most importantly", type: 'D', weight: 1, next: 8 } //S
+            ]
+        },
+
+        //Thinkers/Feelers 
+
+        {
+            speaker: 'bot',
+            text: ["9) Would you identify yourself as a logical person or one who values emotions and personal values?"],
+            choices: [
+                { id: 1, text: "Emotions are what make us human! ", type: 'A', weight: 1, next: 9 }, //F
+                { id: 2, text: "Staying logical is the safest bet.", type: 'B', weight: 1, next: 9 }, //T
+                { id: 3, text: "I like to make decisions based on my personal values ", type: 'C', weight: 1, next: 9 }, //F
+                { id: 4, text: "Brain over heart any day. ", type: 'D', weight: 1, next: 9 } //T
+            ]
+        },
+
+        {
+            speaker: 'bot',
+            text: ["10) Do you get clouded by your emotions often, or are you more grounded?"],
+            choices: [
+                { id: 1, text: "My mind goes on rollercoasters of emotions ", type: 'A', weight: 1, next: 10 }, //F
+                { id: 2, text: "I tend to put my own emotions to the side for the greater good.", type: 'B', weight: 1, next: 10 }, //T
+                { id: 3, text: "Being reasonable is what got me this far. ", type: 'C', weight: 1, next: 10 }, //T
+                { id: 4, text: "I let my emotions take the driver's seat too often", type: 'D', weight: 1, next: 10 } //F
+            ]
+        },
+
+        {
+            speaker: 'bot',
+            text: ["11) When someone comes to you with a problem, what’s your first instinct?"],
+            choices: [
+                { id: 1, text: "I find a practical solution ", type: 'A', weight: 1, next: 11 }, //T
+                { id: 2, text: "I listen and empathize, it’s best to allow people to be heard", type: 'B', weight: 1, next: 11 }, //F
+                { id: 3, text: "I get too emotionally invested", type: 'C', weight: 1, next: 11 }, //F
+                { id: 4, text: "I try piecing out where it went wrong in the first place", type: 'D', weight: 1, next: 11 } //T
+            ]
+        },
+
+        //Judging/Percievng
+
+        {
+            speaker: 'bot',
+            text: ["12) How often do you like to stick to a schedule?"],
+            choices: [
+                { id: 1, text: "I can’t think of my day-to-day without a schedule", type: 'A', weight: 1, next: 12 }, //J
+                { id: 2, text: "Oh, I avoid schedules like the plague! ", type: 'B', weight: 1, next: 12 }, //P
+                { id: 3, text: "I try creating schedules, but they never work out too much", type: 'C', weight: 1, next: 12 }, //P
+                { id: 4, text: "I like schedules. They are concrete and reliable", type: 'D', weight: 1, next: 12 } //J
+            ]
+        },
+
+        {
+            speaker: 'bot',
+            text: ["13) Do you consider yourself open-minded about most things?"],
+            choices: [
+                { id: 1, text: "My mind is as open as space!", type: 'A', weight: 1, next: 13 }, //P
+                { id: 2, text: "I do tend to have my own opinions, but I keep them to myself for the most part", type: 'B', weight: 1, next: 13 }, //J
+                { id: 3, text: "Yup! I think so, I love learning new things.", type: 'C', weight: 1, next: 13 }, //P
+                { id: 4, text: "Nope. My opinion is the only right opinion.", type: 'D', weight: 1, next: 13 } //J
+            ]
+        },
+
+        {
+            speaker: 'bot',
+            text: ["14) How much do you like surprises? "],
+            choices: [
+                { id: 1, text: "Ooooh, are you giving me a surprise? Exciting! ", type: 'A', weight: 1, next: 14 }, //P
+                { id: 2, text: "From time to time.", type: 'B', weight: 1, next: 14 }, //J
+                { id: 3, text: "Not much, it messes with my plans sometimes.", type: 'C', weight: 1, next: 14 }, //J
+                { id: 4, text: "Opening up gifts was my favourite part of Christmas ", type: 'D', weight: 1, next: 14 } //P
+            ]
+        },
+
         {
             speaker: 'bot',
             text: ["Thank you for answering all the questions!"],
