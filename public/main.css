@@ -1,0 +1,152 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffddf8;
+    margin: 0;
+}
+
+
+.phone {
+    width: 350px; 
+    height: 600px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.content {
+    flex-grow: 1;  
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.content img{
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+}
+
+.title{
+    color: brown;
+    margin-bottom: 1px;
+}
+
+.subTitle{
+    font-size: 15px;
+}
+
+.startButton{
+    background-color: #f4a9b8;
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: brown;
+    margin-top: 15px;
+    width: 60%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.startButton:hover{
+    background-color: #d88193;
+}
+
+.header {
+    background: #f4a9b8;
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bottom {
+    background: #f4a9b8;
+    text-align: center;
+    padding: 10px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.chatbox {
+    padding: 20px;
+    height: calc(100% - 170px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Messaging stye to be used with css framework*/
+.message {
+    background-color: #f1f1f1;
+    border-radius: 100px;
+    padding: 15px;
+    margin: 5px 0;
+    max-width: 80%;
+}
+
+.message.user {
+    background-color: #ecc6d8;
+    color: black;
+    align-self: flex-end;
+    border-radius: 100px;
+    padding: 15px;
+    max-width: 80%;
+}
+
+#chatbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.typing-indicator {
+    font-style: italic;
+    color: #999;
+    display: none;
+}
+
+#choices {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+
+
+.choice-button {
+    font-family: 'Andale Mono', monospace;
+    background-color: #ecc6d8;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 95%;
+}
+
+.choice-button:hover {
+    background-color: #d881a4;
+    transition: 0.3s;
+}
