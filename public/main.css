@@ -150,3 +150,21 @@ body {
     background-color: #d881a4;
     transition: 0.3s;
 }
+
+#talk-to-personality-btn {
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#talk-to-personality-btn:hover {
+    background-color: #45a049;
+}
