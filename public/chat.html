@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phone Mockup</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script defer src="chat.js"></script>
+  <style>
+    body {
+      background-color: #ffe6f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .phone {
+      width: 350px; 
+      height: 650px;
+      background: #fff;
+      border-radius: 40px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .phone-top,
+    .phone-bottom {
+      background-color: #f4a6b8;
+      height: 60px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+    }
+    .phone-top {
+      top: 0;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .phone-bottom {
+      bottom: 0;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .screen {
+      position: absolute;
+      top: 60px;
+      bottom: 60px;
+      left: 0;
+      right: 0;
+      background: #fafafa;
+      border-radius: 20px;
+      margin: 0 5px;
+      display: flex;
+      flex-direction: column;
+    }
+    .sensor {
+      width: 6px;
+      height: 6px;
+      background: black;
+      border-radius: 50%;
+    }
+    .earpiece {
+      width: 30px;
+      height: 4px;
+      background: black;
+      border-radius: 2px;
+    }
+    .home-button {
+      width: 28px;
+      height: 28px;
+      border: 2px solid #ccc;
+      border-radius: 50%;
+      background: white;
+    }
+    .content {
+      flex-grow: 1;  
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .input:focus {
+      border-color: #f48fb1;
+      box-shadow: 0 0 0 0.125em rgba(244, 143, 177, 0.25);
+    }
+
+    /* Chatbox styling */
+    #chat {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .chat-message {
+      max-width: 80%;
+      padding: 10px;
+      border-radius: 10px;
+      background: #f4f4f4;
+      align-self: flex-start;
+      word-wrap: break-word;
+    }
+
+    .user-message {
+      background: #f48fb1;
+      color: white;
+      align-self: flex-end;
+    }
+
+    .bot-message {
+      background: #e0e0e0;
+      color: #333;
+    }
+
+    .input-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .input-container .input {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+
+    .button {
+      background-color: #f48fb1;
+      color: white;
+      border-radius: 10px;
+    }
+
+    /* Typing animation styling */
+    .typing-indicator {
+      display: inline-block;
+      width: 50px;
+      height: 10px;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #333;
+      border-radius: 50%;
+      opacity: 0;
+      animation: fadeInOut 1.5s infinite ease-in-out;
+    }
+
+    .dot:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .dot:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+    .dot:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="phone">
+      <div class="phone-top">
+        <div class="sensor"></div>
+        <div class="earpiece"></div>
+      </div>
+      <div class="screen">
+        <div id="chat"></div>
+        <div class="input-container">
+          <input class="input" type="text" id="user-input" placeholder="Type a message..." required>
+          <button class="button" id="send-btn">Send</button>
+        </div>
+      </div>
+      <div class="phone-bottom">
+        <div class="home-button"></div>
+      </div>
+    </div>
+</body>
+</html>
