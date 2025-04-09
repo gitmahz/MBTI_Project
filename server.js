@@ -1,8 +1,13 @@
-
 const express = require('express');
 const path = require('path');
 const app = express();
+const cors = require('cors');
 
+app.use(cors({
+    origin: 'http://localhost:8080', 
+    origin:'http://192.168.2.107:8080',// allow only your frontend
+    credentials: true
+}));
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));

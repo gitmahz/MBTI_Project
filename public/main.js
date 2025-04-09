@@ -338,8 +338,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else {
                     saveResult();
                 }
-            }, );
-        }, );
+            }, 1500);
+        }, 500);
     }
     
     // Update the debug scores if the element exists
