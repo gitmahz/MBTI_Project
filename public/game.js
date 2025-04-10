@@ -338,8 +338,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else {
                     saveResult();
                 }
-            }, );
-        }, );
+            },1500 );
+        }, 500);
     }
     
     // Update the debug scores if the element exists
@@ -383,7 +383,10 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(response => response.json())
             .then(obj => {
                 // Get array of values directly
-                const data = Object.values(obj);
+                let data = Object.values(obj)
+                .filter(item => item.value > 0) // Remove 0 values
+                .sort((a, b) =>  b.value - a.value ); // Sort in ascending order
+
                 console.log(data);
     
                 // Setup chart dimensions

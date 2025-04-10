@@ -152,8 +152,8 @@ body {
 
 #talk-to-personality-btn {
     position: fixed;
-    bottom: 60px;
-    left: 50%;
+    bottom: 90px;
+    left: 47.5%;
     transform: translateX(-50%);
     padding: 10px 20px;
     font-size: 16px;
@@ -166,4 +166,41 @@ body {
 
 #talk-to-personality-btn:hover {
     background-color: #45a049;
+}
+#legend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f8f0f4;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+#largest-value-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: brown;
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
 }
